@@ -1,8 +1,8 @@
-# Hourly Power Data to Standardized 576 Format Converter
+# Annual Hourly 8760 Data to 576 Format Converter
 
 ## Overview
 
-This program processes hourly power data and converts it into a standardized 576 format. It calculates statistical percentiles for each hour of each month based on input power data, ensuring that the results are reliable and formatted correctly for further analysis or reporting.
+This script processes annual, hourly 8760 data and converts it into the standardized 576 format. It calculates statistical percentiles for each hour of each month based on input data, then calculates the averages of the values above or below those percentiles.
 
 ## Features
 
@@ -40,7 +40,7 @@ python convert_to_576.py -i <input_file.csv> -o <output_file.csv> -y <year> -d
 ### Example
 
 ```bash
-python convert_to_576.py -i power_8760_data.csv -o converted_576_data.csv -y 2023
+python convert_to_576.py -i ./sample_csv/8760_sample.csv -o converted_576_data.csv -y 2023 --debug
 ```
 
 If no input file is provided, the program will generate a sample dataset.
